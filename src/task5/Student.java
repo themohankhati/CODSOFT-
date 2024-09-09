@@ -1,6 +1,8 @@
 package task5;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private String name;
     private int rollNumber;
     private String grade;

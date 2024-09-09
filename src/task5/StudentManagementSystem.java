@@ -1,9 +1,6 @@
 package task5;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.util.ArrayList;
 
 public class StudentManagementSystem {
@@ -44,8 +41,8 @@ public class StudentManagementSystem {
     }
 
     public void saveToFile(String fileName) throws IOException{
-        try(ObjectInputStream out=new ObjectInputStream(new FileInputStream(fileName))){
-            out.writeobject(students);
+        try(ObjectOutputStream out=new ObjectOutputStream(new FileOutputStream(fileName))){
+            out.writeObject(students);
         }
     }
 
